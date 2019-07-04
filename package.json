@@ -7,7 +7,9 @@
   "license": "MIT",
   "main": "flexiblegs-scss-plus.scss",
   "scripts": {
-    "build": "node-sass main.scss flexiblegs-css.css --output-style expanded; node-sass main.scss flexiblegs-css.min.css --output-style compressed"
+    "build": "node-sass main.scss flexiblegs-css.css --output-style expanded; node-sass main.scss flexiblegs-css.min.css --output-style compressed",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "keywords": [
     "css",
@@ -20,10 +22,12 @@
   },
   "dependencies": {
     "flexiblegs-scss": "^5.6.0",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "snyk": "^1.189.0"
   },
   "engines": {
     "node": "10.14.1",
     "npm": "6.5.0"
-  }
+  },
+  "snyk": true
 }
